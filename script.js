@@ -2,14 +2,13 @@
 
 var slideUp = ScrollReveal({
     origin: 'top',
-    distance: '70px',
+    distance: '30px',
     duration:2000,
     easing: 'ease-out',
-     cleanup: true,
-
     // reset: true
 });
-slideUp.reveal('.landing-page, .modern-home, .react-section, .miscellaneous, .feature, .explore,footer', {
+
+slideUp.reveal('.landing-page, .modern-home, .cards, .react-section, .miscellaneous, .feature, .explore,footer', {
     afterReveal: function(el) {
         ScrollReveal().clean(el);
     }
@@ -21,8 +20,7 @@ window.addEventListener('scroll', function () {
         icon.classList.remove("hidden")
     }
     else if (this.document.documentElement.scrollTop < 1000) {
-        icon.classList.add("hidden")
-
+        icon.classList.add("hidden");
     }
 })
 
